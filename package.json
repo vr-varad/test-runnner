@@ -1,0 +1,17 @@
+{
+  "name": "test-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "colorette": "^2.0.20",
+    "must": "^0.13.4",
+    "uuidv4": "^6.2.13"
+  }
+}
