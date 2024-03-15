@@ -1,46 +1,40 @@
 ## in-house test-runner
 This is a in house test-runner framework without any 3rd party testing framework.
 
-### Enhancements that have to be done.
-- transfer the ```npm must``` package assertions and many more assertions to inhouse code.
-- working on test running command.
-- describe only to run only test.
-- working on reporter.
-many more.
-
-
 #### Demo
 
 demo.js
 ```
-const {describe,it,run} = require('./runner')
-const demand =  require('must')
-describe("testing",()=>{
-    it("addition",()=>{
-        demand(1+1).must.eql(3)
-    })
-})
-```
-demo1.js
-```
-const {describe,it,run} = require('./runner')
-const demand =  require('must')
-describe("testing2",()=>{
-    it("substraction",()=>{
-        demand(1-1).must.eql(0)
-    })
-})
+const {test,end} = require('./test');
+
+test('Test Addition', (t) => {
+    t.equal(2 + 2, 4, '2 + 2 should equal 4');
+});
+
+test('Test Subtraction', (t) => {
+    t.equal(5 - 3, 4, '5 - 3 should equal 2');
+});
+
+test('Test Multiplication', (t) => {
+    t.equal(5 * 3, 15, '5 * 3 should equal 15');
+});
+
+end()
 ```
 
 result
 ```
-testing
-  ✗addition
+#1 ok Test Addition passed
+#2 not ok Test Subtraction not passed at (/home/varad/Desktop/testing/test-runner/tests.js:7:1)
+5 - 3 should equal 2. Expected 4, but got 2
+#3 ok Test Multiplication passed
 
-testing2
-  ✓substraction
-
-FAIL addition
-✗ Expected 2 but got 3
+# Running 3 tests:
+# --------------------------------
+# 
+# Results:
+#   Passed: 2
+#   Failed: 1
+# 
 
 ```
