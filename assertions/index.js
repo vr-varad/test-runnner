@@ -1,3 +1,7 @@
-const {equal} = require('./equal')
+const equal = require('./equal')
+const end = require('./end')
 
-module.exports = {equal}
+module.exports = {
+    equal,
+    end
+}

@@ -1,7 +1,13 @@
-function equal(actual, expected, message) {
+
+function equal(actual, expected, msg) {
+    global.message = msg;
     if (actual !== expected) {
-        throw (`${message}. Expected ${expected}, but got ${actual}`);
+        throw ({
+            actual,
+            expected,
+            message
+        });
     }
 }
 
-module.exports = { equal };
+module.exports = equal;

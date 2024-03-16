@@ -9,14 +9,17 @@ const {test,end} = require('./test');
 
 test('Test Addition', (t) => {
     t.equal(2 + 2, 4, '2 + 2 should equal 4');
+    t.end()
 });
 
 test('Test Subtraction', (t) => {
     t.equal(5 - 3, 4, '5 - 3 should equal 2');
+    t.end()
 });
 
 test('Test Multiplication', (t) => {
     t.equal(5 * 3, 15, '5 * 3 should equal 15');
+    t.end()
 });
 
 end()
@@ -24,10 +27,21 @@ end()
 
 result
 ```
-#1 ok Test Addition passed
-#2 not ok Test Subtraction not passed at (/home/varad/Desktop/testing/test-runner/tests.js:7:1)
-5 - 3 should equal 2. Expected 4, but got 2
-#3 ok Test Multiplication passed
+Test Addition
+# ok 1 -> 2 + 2 should equal 4
+
+Test Subtraction
+# not ok 0 - Test Subtraction
+------
+actual- 2
+expected- 4
+message- 5 - 3 should equal 2
+at- (/home/varad/Desktop/testing/test-runner/tests.js:8:1)
+------
+
+Test Multiplication
+# ok 3 -> 5 * 3 should equal 15
+
 
 # Running 3 tests:
 # --------------------------------

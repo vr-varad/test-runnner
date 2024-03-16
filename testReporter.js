@@ -1,4 +1,4 @@
-function report(testCount, passedCount) {
+function report() {
     console.log()
     console.log(`# Running ${testCount} tests:`);
     console.log(`# --------------------------------`);
