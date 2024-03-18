@@ -2,16 +2,12 @@ const {report} = require('./testReporter');
 const {equal,end} = require('./assertions');
 
 
-function executeTest(name, testFunction) {
-    try {
-        console.log(`${name}`);
-        testFunction(assertionMethods);
-    } catch (error) {
-        throw error;
-    }
+ function executeTest(name, testFunction) {
+    console.log(`${name}`);
+    testFunction(assertionMethods)
 }
 
-function runTests(testCount, passedCount) {
+ function runTests(testCount, passedCount) {
     report(testCount, passedCount);
 }
 

@@ -1,12 +1,12 @@
 
-function equal(actual, expected, msg) {
+ function equal(expected, actual, msg) {
     global.message = msg;
     if (actual !== expected) {
-        throw ({
+        global.result =  {
             actual,
             expected,
             message
-        });
+        }
     }
 }
 

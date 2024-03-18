@@ -10,12 +10,25 @@ test('Test Subtraction', (t) => {
     t.end()
 });
 
-test('Test Multiplication', (t) => {
-    t.equal(5 * 3, 15, '5 * 3 should equal 15');
+test('test async nature',async function(t){
+    const result =  await myAsyncFunction();
+    console.log(result)
+    t.equal(5 - 3, result, '5 - 3 should equal 2');
     t.end()
-});
+})
+
+// test('Test Multiplication', (t) => {
+//     t.equal(5 * 3, 15, '5 * 3 should equal 15');
+//     t.end()
+// });
 
 end()
 
-
+async function myAsyncFunction() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(2);
+        }, 1000);
+    });
+}
 
