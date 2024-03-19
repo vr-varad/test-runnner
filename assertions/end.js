@@ -1,5 +1,4 @@
 function end() {
-    
     if (global.result && typeof global.result === 'object' && Object.keys(global.result).length === 0) {
         console.log(`# ok ${global.testCount} -> ${global.message}`);
     }else{

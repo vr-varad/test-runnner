@@ -1,5 +1,5 @@
 
- function equal(expected, actual, msg) {
+ async function equal(expected, actual, msg) {
     global.message = msg;
     if (actual !== expected) {
         global.result =  {
@@ -7,6 +7,8 @@
             expected,
             message
         }
+    }else{
+        global.result = {}
     }
 }
 

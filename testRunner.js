@@ -2,16 +2,14 @@ const {report} = require('./testReporter');
 const {equal,end} = require('./assertions');
 
 
- function executeTest(name, testFunction) {
+async function executeTest(name, testFunction) {
     console.log(`${name}`);
-    testFunction(assertionMethods)
+    await testFunction(assertionMethods)
 }
 
- function runTests(testCount, passedCount) {
-    report(testCount, passedCount);
+async function runTests(testCount, passedCount) {
+    await report(testCount, passedCount);
 }
-
-
 
 const assertionMethods = {
     equal,
